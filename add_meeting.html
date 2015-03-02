@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="meetingApp">
+	<head>
+		<title>Add Meeting</title>
+        <meta charset="utf-8" />
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/meeting.js"></script>
+		<script type="text/javascript" src="js/member.js"></script>
+		<script type="text/javascript" src="js/help.js"></script>
+        <script type="text/javascript" src="js/help-directives.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/select2.min.css">
+        <link rel="stylesheet" href="css/datepicker3.css">
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/select2.min.js"></script>
+        <script src="js/bootstrap-datepicker.js"></script>
+        <script src="js/locales/bootstrap-datepicker.de.js"></script>
+	</head>
+
+	<body>
+        <form method="post" id="meetingForm">
+            <input type="hidden" id="memberId" name="memberId" />
+            <input type="text" name="name" required="required" placeholder="Name"/>
+            <member-list></member-list>
+            <datetime-picker></datetime-picker>
+            <datetime-picker></datetime-picker>
+            <input type="button" value="Sitzung erstellen"  />
+        </form>
+	</body>
+</html>
