@@ -19,14 +19,17 @@
         <script src="js/locales/bootstrap-datepicker.de.js"></script>
 	</head>
 
-	<body>
-        <form method="post" id="meetingForm">
+	<body ng-app="meetingApp">
+	<div class="container">
+        <form method="post" id="meetingForm" ng-controller="MeetingController as meetingCtrl">
             <input type="hidden" id="memberId" name="memberId" />
-            <input type="text" name="name" required="required" placeholder="Name"/>
-            <member-list></member-list>
-            <datetime-picker></datetime-picker>
-            <datetime-picker></datetime-picker>
+            <input class="form-control" type="text" required="required" placeholder="Name" ng-model="meetingCtrl.meeting.name"/>
+            <member-list my-model="meetingCtrl.meeting.members"></member-list>
+            <datetime-picker my-placeholder="Startzeit" my-label="Startzeit" my-model="meetingCtrl.meeting.startTime"></datetime-picker>
+            <datetime-picker my-placeholder="Endzeit" my-label="Endzeit" my-model="meetingCtrl.meeting.endTime"></datetime-picker>
             <input type="button" value="Sitzung erstellen"  />
+            {{meetingCtrl.meeting | json }}
         </form>
+	</div>
 	</body>
 </html>

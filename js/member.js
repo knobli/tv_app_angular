@@ -5,24 +5,18 @@
       return {
         restrict: 'E',
         templateUrl: "member-list.html",
+        scope: {
+            myModel: '='
+        },
         controller: function(){
 				    	var memberController = this;
-				    	var selectedItem;
 				    	this.members = [];
-				    	$http.get(getAPIUrl() + '/member').success(function(data){
+				    	$http.get(getAPIUrl() + '/member.php').success(function(data){
 				    		memberController.members = data;
 				    	});        	
         },
         controllerAs: "memberCtrl"
       };
     }]);
-    
-  	app.controller("memberController", ['$http', function($http) {
-		var memberController = this;
-		this.members = [{firstname: 'Test'}, {firstname: 'Test2'}];
-		$http.get(getAPIUrl() + '/member').success(function(data){
-			//memberController.members = data;
-		});   
-    }]);    
     
 })();

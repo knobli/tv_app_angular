@@ -1,9 +1,10 @@
-<p>selected item is : {{selectedItem}}</p>
+<label>Mitglieder:</label>
 <select data-placeholder="Wähle aus den Mitgliedern aus"
         id="memberSelect"
+	    class="form-control"
         multiple="multiple"
         style="width:750px;"
-        ng-model="selectedItem"
+        ng-model="myModel"
         ng-options="member.id as (member.firstname + ' ' + member.surname) for member in memberCtrl.members">
 </select>
 <script>

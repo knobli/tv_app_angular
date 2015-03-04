@@ -7,8 +7,13 @@
     app.directive("datetimePicker", function() {
         return {
             restrict: 'E',
-            templateUrl: "datetime-picker.html"
+            templateUrl: "datetime-picker.html",
+            scope: {
+                myModel: '=',
+                myPlaceholder: '@',
+                myLabel: '@'
+            },
+            replace: false
         };
     });
-
 })();
