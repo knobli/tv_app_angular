@@ -3,7 +3,9 @@
 <input class="form-control datetime-picker" placeholder="{{myPlaceholder}}" ng-model="myModel">
 <script>
     $('.datetime-picker').datepicker({
-        language: "de"
+        autoclose: true,
+        language: "de",
+        startDate: new Date()
     });
 </script>
 </div>

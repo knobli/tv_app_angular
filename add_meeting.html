@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/select2.min.css">
         <link rel="stylesheet" href="css/datepicker3.css">
+        <link rel="stylesheet" href="css/tvg.css">
         <script src="js/bootstrap.min.js"></script>
         <script src="js/select2.min.js"></script>
         <script src="js/bootstrap-datepicker.js"></script>
@@ -21,7 +22,7 @@
 
 	<body ng-app="meetingApp">
 	<div class="container">
-        <form method="post" id="meetingForm" ng-controller="MeetingController as meetingCtrl">
+        <form method="post" id="meetingForm" ng-controller="MeetingController as meetingCtrl" novalidate>
             <input type="hidden" id="memberId" name="memberId" />
             <input class="form-control" type="text" required="required" placeholder="Name" ng-model="meetingCtrl.meeting.name"/>
             <member-list my-model="meetingCtrl.meeting.members"></member-list>
