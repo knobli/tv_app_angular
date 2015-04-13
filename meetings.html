@@ -1,0 +1,38 @@
+<!doctype html>
+<html ng-app="meetingApp">
+<head>
+    <title>Sitzungen</title>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/meeting.js"></script>
+    <script type="text/javascript" src="js/member.js"></script>
+    <script type="text/javascript" src="js/help.js"></script>
+    <script type="text/javascript" src="js/help-directives.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="css/tvg.css">
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+    <script src="js/locales/bootstrap-datetimepicker.de.js"></script>
+    <script src="js/typeahead.jquery.min.js"></script>
+    <script src="js/ui-bootstrap-custom-0.12.1.min.js"></script>
+    <script src="js/ui-bootstrap-custom-tpls-0.12.1.min.js"></script>
+</head>
+
+<body ng-app="meetingApp">
+    <nav class="navbar navbar-inverse">
+        <p class="navbar-text">Neue Sitzung</p>
+    </nav>
+    <div class="container" ng-controller="MeetingController as meetingCtrl">
+        <div role="main" class="ui-content">
+            <ul data-role="listview" data-inset="false" id="meetingsList">
+
+            </ul>
+        </div><!-- /content -->
+    </div>
+</body>
+</html>
