@@ -4,16 +4,18 @@
   	app.directive("memberList", ['$http', function($http) {
       return {
         restrict: 'E',
-        templateUrl: "member-list.html",
+        templateUrl: "template/member-list.html",
         scope: {
             myModel: '='
         },
         controller: function(){
+                        $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
 				    	var memberController = this;
 				    	this.members = [];
-				    	$http.get(getAPIUrl() + '/member.php').success(function(data){
-				    		memberController.members = data;
-				    	});        	
+				    	$http.post(getAPIUrl() + '/member.php' , $.param({memberId: getUserId()})).
+                            success(function(data){
+				    		    memberController.members = data;
+				    	    });
         },
         controllerAs: "memberCtrl"
       };

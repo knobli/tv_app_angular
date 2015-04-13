@@ -72,8 +72,16 @@ $.ajaxSetup({
 	cache : false
 });
 
+function getBaseUrl(){
+    return 'http://localhost/tvdb_wetten';
+}
+
+function getAjaxUrl() {
+    return getBaseUrl() + '/ajax';
+}
+
 function getAPIUrl() {
-	return 'https://grafstal.ch/controller/json/v0.3';
+	return getBaseUrl() + '/controller/json/v0.4';
 }
 
 function addInformation(listId, info){
@@ -228,6 +236,19 @@ function getUrlParameter(url, sParam) {
 function getParameterByName(name) {
 	var match = RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
 	return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+}
+
+function alertErrorMessage(msg, errorMessages){
+    var errorMessagesAsString = "";
+    if($.isArray(errorMessages)){
+        $.each( errorMessages, function( key, errorMessage ) {
+            errorMessagesAsString += errorMessage.message + " ";
+        });
+        errorMessagesAsString = errorMessagesAsString.substring(0, errorMessagesAsString.length - 1);
+    } else {
+        errorMessagesAsString = errorMessages;
+    }
+    alert(msg + errorMessagesAsString);
 }
 
 function roundTwoDecimalPlaces(number){

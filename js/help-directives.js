@@ -7,7 +7,7 @@
     app.directive("datetimePicker", function() {
         return {
             restrict: 'E',
-            templateUrl: "datetime-picker.html",
+            templateUrl: "template/datetime-picker.html",
             scope: {
                 myModel: '=',
                 myPlaceholder: '@',
