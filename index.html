@@ -1,7 +1,7 @@
 <!doctype html>
 <html ng-app="mobileApp">
 <head>
-    <title>Sitzungen</title>
+    <title>News</title>
     <meta charset="utf-8" />
     <script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
     <script src="js/lib/jquery.mobile-1.4.3.min.js"></script>
@@ -38,20 +38,13 @@
             <a href="#left-panel" data-icon="grid" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon">Open left panel</a>
             <a href="add_meeting.html" data-icon="plus" data-iconpos="notext" data-shadow="false" data-iconshadow="false" class="ui-nodisc-icon">Add</a>
         </div><!-- /header -->
-        <div role="main" class="ui-content" ng-controller="MeetingController as meetingCtrl">
-            <ul data-role="listview" data-inset="false">
-                <li ng-repeat="meetingContainer in meetingCtrl.meetings">
-                    <a href="meeting.html?id={{meetingContainer.object.id}}" ng-class="meetingCtrl.getSigninClass(meetingContainer.status)">
-                        <fieldset class="ui-grid-a">
-                            <div class="ui-block-a">
-                                <h2>{{meetingContainer.object.name}}</h2>
-                                <p><strong>{{meetingContainer.object.location.name}}</strong></p>
-                            </div>
-                            <div class="ui-block-b ui-li-aside">
-                                <p><strong>{{meetingContainer.object.startDate.date | myDate:'HH:mm'}}</strong></p>
-                                <p>{{meetingContainer.object.responsible | memberName}}</p>
-                            </div>
-                        </fieldset>
+        <div role="main" class="ui-content" ng-controller="NewsController as newsCtrl">
+            <ul data-role="listview" data-inset="false" id="newsList">
+                <li ng-repeat="news in newsCtrl.news">
+                    <a href="news.html?id={{news.id}}">
+                        <h2>{{news.title}}</h2>
+                        <p>{{news.createDate.date | myDate:'dd.MM.yyyy'}}</p>
+                        <p class="text-with-nl" ng-bind-html="news.introText"></p>
                     </a>
                 </li>
             </ul>

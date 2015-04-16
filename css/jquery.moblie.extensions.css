@@ -1,0 +1,137 @@
+img {
+	max-width: 100%;
+}
+
+iframe {
+	max-width: 100%;
+}
+
+.ui-listview .ui-li-right-side {
+	position: absolute;
+	top: 1em;
+	right: 3.333em;
+	text-align: right
+}
+
+.signin {
+	background: rgba(71, 121, 42, 0.6) !important;
+	text-shadow: 0 1px 0 rgba(71, 121, 42, 0.2) !important;
+}
+
+.signin:hover {
+	background: rgba(71, 121, 42, 0.8) !important;
+	text-shadow: 0 1px 0 rgba(71, 121, 42, 0.4) !important;
+}
+
+.signinSpecial {
+	background: rgba(215, 190, 53, 0.6) !important;
+	text-shadow: 0 1px 0 rgba(215, 190, 53, 0.2) !important;
+}
+
+.signinSpecial:hover {
+	background: rgba(215, 190, 53, 0.8) !important;
+	text-shadow: 0 1px 0 rgba(215, 190, 53, 0.4) !important;
+}
+
+.signout {
+	background: rgba(215, 44, 44, 0.6) !important;
+	text-shadow: 0 1px 0 rgba(215, 44, 44, 0.2) !important;
+}
+
+.signout:hover {
+	background: rgba(215, 44, 44, 0.8) !important;
+	text-shadow: 0 1px 0 rgba(215, 44, 44, 0.4) !important;
+}
+
+.offline {
+	background: rgba(215, 44, 44, 0.6) !important;
+	text-shadow: 0 1px 0 rgba(215, 44, 44, 0.2) !important;
+}
+
+.total {
+	border-bottom:double;
+}
+
+.popupFrame {
+	padding:10px 20px;
+}
+
+.text-indent {
+	padding-left: 10px;
+}
+
+.text-with-nl {
+	white-space: normal !important;
+}
+
+.img-container {
+	float: left;
+	width: 80px;
+	height: 80px;
+}
+
+.img-center-outer {
+	margin-left: auto;
+	margin-right: auto;
+	display: table;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.img-center-inner {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.image-link {
+	text-align: center;
+	padding: .7em 0px !important;
+}
+
+@-webkit-keyframes fadeinSpecial {
+	from {opacity: 1;}
+	to {opacity: 1;}
+}
+@-moz-keyframes
+fadeinSpecial {
+	from {opacity: 1;}
+	to {opacity: 1;}
+}
+@keyframes
+fadeinSpecial {
+	from {opacity: 1;}
+	to {opacity: 1;}
+}
+@-webkit-keyframes
+fadeoutSpecial {
+	from {opacity: 1;}
+	to {opacity: 1;}
+}
+@-moz-keyframes
+fadeoutSpecial {
+	from {opacity: 1;}
+	to {opacity: 1;}
+}
+@keyframes
+fadeoutSpecial {
+	from {opacity: 1;}
+	to {opacity: 1;}
+}
+.fadeSpecial.out {
+	opacity: 1;
+	-webkit-animation-duration: 125ms;
+	-webkit-animation-name: fadeoutSpecial;
+	-moz-animation-duration: 125ms;
+	-moz-animation-name: fadeoutSpecial;
+	animation-duration: 125ms;
+	animation-name: fadeoutSpecial;
+}
+.fadeSpecial.in {
+	opacity: 1;
+	-webkit-animation-duration: 225ms;
+	-webkit-animation-name: fadeinSpecial;
+	-moz-animation-duration: 225ms;
+	-moz-animation-name: fadeinSpecial;
+	animation-duration: 225ms;
+	animation-name: fadeinSpecial;
+}

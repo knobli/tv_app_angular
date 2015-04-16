@@ -2,6 +2,17 @@
     var app = angular.module('meetingApp', ['memberApp', 'helpDirectivesApp', 'ui.bootstrap']);
 
     app.controller('MeetingController', ['$http', function($http) {
+        var meetingCtrl = this;
+        meetingCtrl.meetings = [];
+        $http.get(getAPIUrl() + '/meeting.php?memberId='+getUserId()).success(function (response) {
+            meetingCtrl.meetings = response;
+        });
+        this.getSigninClass = function(status){
+            if(isLoggedIn()) {
+                return getMemberStatusCss(status);
+            }
+        }
+
         this.meeting = {responsible: getUserId(),
                         mail: 1
         };
